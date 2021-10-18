@@ -24,3 +24,8 @@ This application makes use of the following Steeltoe components:
 
 1. 'docker compose up' - To start all the services in docker compose.
 2. 'docker compose down -v' - To tear down all the resources. 
+
+
+Home page for the UI after the container startup and warm up :- 
+
+http://localhost:82/

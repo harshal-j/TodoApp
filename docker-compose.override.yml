@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  todoapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Container
+    ports:
+      - "81:80"
+
+  todoui:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Container
+    ports:
+      - "82:80"
+

@@ -1,0 +1,55 @@
+version: '3.4'
+services:
+  configserver:
+    image: steeltoeoss/config-server
+    command: --spring.cloud.config.server.git.uri=${GIT_URL}
+    ports:
+      - "8888:8888"
+  eurekaserver:
+    image: steeltoeoss/eureka-server
+    ports:
+      - "8761:8761"  
+  mysql:
+    image: ${DOCKER_REGISTRY-}mysql
+    ports: 
+        - 3306:3306
+    restart: always
+    environment: 
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: mydb
+        MYSQL_USER: user
+        MYSQL_PASSWORD: user
+    build:
+      context: .
+      dockerfile: db/Dockerfile
+    volumes:
+      - dbdata:/var/lib/mysql
+    depends_on:
+      - configserver
+      - eurekaserver
+  adminer:
+    image: adminer
+    restart: always
+    ports: 
+        - 8080:8080
+  todoapi:
+    image: ${DOCKER_REGISTRY-}todoapi
+    build:
+      context: .
+      dockerfile: src/TodoApi/Dockerfile
+    depends_on:
+      - configserver
+      - eurekaserver 
+      - mysql
+  todoui:
+    image: ${DOCKER_REGISTRY-}todoui
+    build:
+      context: .
+      dockerfile: src/TodoUI/Dockerfile
+    depends_on:
+      - configserver
+      - eurekaserver  
+      - mysql
+      - todoapi
+volumes:
+  dbdata:

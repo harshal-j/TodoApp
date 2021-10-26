@@ -9,6 +9,7 @@ using TodoApi.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using Microsoft.Extensions.Logging;
+using Steeltoe.Management.Tracing;
 
 namespace TodoApi
 {

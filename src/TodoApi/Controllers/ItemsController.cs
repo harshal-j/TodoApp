@@ -17,7 +17,7 @@ namespace TodoApi.Controllers
         private readonly ILogger<ItemsController> _logger;
         private readonly TodosContext _context;
 
-        public ItemsController(ILogger<ItemsController> logger, TodosContext context, IConfiguration configuration)
+        public ItemsController(ILogger<ItemsController> logger, TodosContext context)
         {
             _logger = logger;
             _context = context;

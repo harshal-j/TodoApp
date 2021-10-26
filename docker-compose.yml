@@ -9,6 +9,10 @@ services:
     image: steeltoeoss/eureka-server
     ports:
       - "8761:8761"  
+  zipkinserver:
+    image: steeltoeoss/zipkin
+    ports:
+      - "9411:9411"
   mysql:
     image: ${DOCKER_REGISTRY-}mysql
     ports: 
@@ -40,6 +44,7 @@ services:
     depends_on:
       - configserver
       - eurekaserver 
+      - zipkinserver
       - mysql
   todoui:
     image: ${DOCKER_REGISTRY-}todoui
@@ -49,6 +54,7 @@ services:
     depends_on:
       - configserver
       - eurekaserver  
+      - zipkinserver
       - mysql
       - todoapi
 volumes:

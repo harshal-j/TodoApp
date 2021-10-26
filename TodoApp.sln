@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "src\TodoApi\Todo
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1E3AB0FB-D57E-4D29-846E-6812CD995F01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi.Tests", "..\TodoApi.Tests\TodoApi.Tests.csproj", "{83F93E93-6E9A-4665-A654-AAC8189CDF4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi.Tests", "src\TodoApi.Tests\TodoApi.Tests.csproj", "{DAF932C8-7647-483C-B636-A1AB339E8122}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{1E3AB0FB-D57E-4D29-846E-6812CD995F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E3AB0FB-D57E-4D29-846E-6812CD995F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E3AB0FB-D57E-4D29-846E-6812CD995F01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{83F93E93-6E9A-4665-A654-AAC8189CDF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{83F93E93-6E9A-4665-A654-AAC8189CDF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{83F93E93-6E9A-4665-A654-AAC8189CDF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{83F93E93-6E9A-4665-A654-AAC8189CDF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF932C8-7647-483C-B636-A1AB339E8122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF932C8-7647-483C-B636-A1AB339E8122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF932C8-7647-483C-B636-A1AB339E8122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF932C8-7647-483C-B636-A1AB339E8122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
